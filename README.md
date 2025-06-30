@@ -44,22 +44,6 @@ Generation/
 
 3. **Get your Suno API key** from the Suno API service
 
-## Migration (For Existing Users)
-
-If you have existing music files and data in the root directory, run the migration script first:
-
-```bash
-python migrate_files.py
-```
-
-This will:
-- Create the new directory structure (`data/`, `music/`, `video/`)
-- Move `savedData.json` to `data/`
-- Move all `.mp3` files to `music/`
-- Move all `.mp4` files to `video/`
-- Update file paths in the JSON data
-- Optionally clean up `.txt` files
-
 ## Usage
 
 ### Starting the Application
@@ -90,7 +74,7 @@ The web interface will be available at: `http://127.0.0.1:7860`
 - Use the built-in audio player to listen
 
 #### 3. Generate Videos
-- Navigate to the **"Generate Video"** tab  
+- Navigate to the **"Generate Video"** tab
 - Click **"🔄 Refresh Music List"** to see available music
 - Select a music file from the dropdown
 - Click **"🎬 Generate Video"**
@@ -132,7 +116,7 @@ This application uses the Suno API endpoints:
 ## File Organization
 
 - **Audio**: MP3 format in `music/` directory
-- **Video**: MP4 format in `video/` directory  
+- **Video**: MP4 format in `video/` directory
 - **Metadata**: JSON format in `data/savedData.json`
 - **Paths**: All file paths are stored in metadata for easy reference
 
@@ -162,7 +146,7 @@ If you encounter issues with the migration script:
 ### Module Overview
 
 - **`music_generation.py`**: Core music generation logic, API calls, file downloading
-- **`video_generation.py`**: Video generation, status monitoring, video downloading  
+- **`video_generation.py`**: Video generation, status monitoring, video downloading
 - **`gradio_interface.py`**: Web interface, user interactions, data display
 - **`main.py`**: Application entry point and startup logic
 
@@ -192,7 +176,35 @@ To extend the application:
 
 ## License
 
-This project is for educational and personal use. Please respect the Suno API terms of service.
+This project is licensed under the MIT License - see below for details.
+
+### MIT License
+
+```
+MIT License
+
+Copyright (c) 2024 Suno Music Generator
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+**Note**: Please respect the Suno API terms of service when using this application.
 
 ## Contributing
 
@@ -200,4 +212,4 @@ Feel free to submit issues and pull requests to improve the application.
 
 ---
 
-**Note**: Make sure you have a valid Suno API key and sufficient credits before using the application. 
+**Note**: Make sure you have a valid Suno API key and sufficient credits before using the application.
