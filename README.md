@@ -68,19 +68,37 @@ The web interface will be available at: `http://127.0.0.1:7860`
 - Click **"Generate Music"**
 - Files will be saved to `music/` directory
 
+![Generate Music Interface](assets/images/FirstPanel.png)
+
 #### 2. Listen to Generated Music
 - Go to the **"Music List & Player"** tab
 - Click **"🔄 Refresh List"** to see your generated music
 - Select a music file from the dropdown
 - Use the built-in audio player to listen
 
-#### 3. Create Videos with Synchronized Lyrics
+![Listen Music Interface](assets/images/SecondPanel.png)
+
+#### 3. Use Suno API to Generate Videos with Lyrics
+- Navigate to the **"Generate Video"** tab
+- Click **"🔄 Refresh Music List"** to see available music files
+- Select a music file from the dropdown (uses stored API key automatically)
+- Click **"🎬 Generate Video"**
+- The system will:
+  - Use the stored API key from when the music was generated
+  - Call the Suno API to generate a video with lyrics
+  - Automatically download the video to the `video/` directory
+  - Handle existing videos gracefully (no regeneration needed)
+
+
+#### 4. Create Videos with Synchronized Lyrics
 - Navigate to the **"Video Creation"** tab
 - Click **"🔄 Refresh Music List"** to see available music
 - Select a music file from the dropdown
 - Upload a background image
 - Click **"🎬 Create Video"**
 - Videos with synchronized lyrics will be saved to `video/` directory
+
+![Generate Video Interface](assets/images/LastPanel.png)
 
 ## Key Features Explained
 
